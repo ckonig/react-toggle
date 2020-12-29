@@ -43,7 +43,7 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 exports.default = _react2.default.forwardRef(function (props, ref) {
   return _react2.default.createElement(Toggle, _extends({
-    innerRef: ref }, props));
+    innerref: ref }, props));
 });
 
 var Toggle = exports.Toggle = function (_PureComponent) {
@@ -85,7 +85,7 @@ var Toggle = exports.Toggle = function (_PureComponent) {
       if (this.props.disabled) {
         return;
       }
-      var checkbox = this.props.innerRef && this.props.innerRef.current || this.input;
+      var checkbox = this.props.innerref && this.props.innerref.current || this.input;
       if (event.target !== checkbox && !this.moved) {
         this.previouslyChecked = checkbox.checked;
         event.preventDefault();
@@ -227,7 +227,7 @@ var Toggle = exports.Toggle = function (_PureComponent) {
         ),
         _react2.default.createElement('div', { className: 'react-toggle-thumb' }),
         _react2.default.createElement('input', _extends({}, inputProps, {
-          ref: this.props.innerRef || function (ref) {
+          ref: this.props.innerref || function (ref) {
             _this2.input = ref;
           },
           onFocus: this.handleFocus,
